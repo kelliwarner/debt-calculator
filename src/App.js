@@ -1,24 +1,45 @@
 import React, { useState, useEffect } from 'react';
+import { TextField, Container } from '@material-ui/core';
 
 const App = () => {
   return (
-    <div>
-      <h1>Debt Calculator</h1>
-      <div className="input">
-        <div>
-          Creditor <input />
-        </div>
-        <div>
-          Current balance <input />
-        </div>
-        <div>
-          Interest rate <input />
-        </div>
-        <div>
-          Monthly payment <input />
-        </div>
+    <Container maxWidth="sm">
+      <div>
+        <h1>Debt Calculator</h1>
+        <form
+          //className={classes.root}
+          noValidate
+          autoComplete="off"
+        >
+          {/* <TextField id="standard-basic" label="Standard" /> */}
+          {/* <TextField id="filled-basic" label="Filled" variant="filled" /> */}
+          <TextField
+            className="input"
+            id="credit"
+            label="Creditor"
+            variant="outlined"
+          />
+          <TextField
+            className="input"
+            id="balance"
+            label="Current Balance"
+            variant="outlined"
+          />
+          <TextField
+            className="input"
+            id="rate"
+            label="Interest Rate"
+            variant="outlined"
+          />
+          <TextField
+            className="input"
+            id="payment"
+            label="Monthly Payment"
+            variant="outlined"
+          />
+        </form>
       </div>
-    </div>
+    </Container>
   );
 };
 
