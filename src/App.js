@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Container } from '@material-ui/core';
+import { TextField, Container, Button } from '@material-ui/core';
 
 const App = () => {
   return (
@@ -37,6 +37,9 @@ const App = () => {
             label="Monthly Payment"
             variant="outlined"
           />
+          <Button variant="contained" color="primary">
+            Calculate
+          </Button>
         </form>
       </div>
     </Container>
